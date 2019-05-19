@@ -3,20 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kdf9000.github.io/post/blog/</loc>
-    <lastmod>2018-10-22T17:31:06+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kdf9000.github.io/</loc>
-    <lastmod>2018-10-22T17:31:06+08:00</lastmod>
+    <lastmod>2019-05-19T21:02:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kdf9000.github.io/post/</loc>
-    <lastmod>2018-10-22T17:31:06+08:00</lastmod>
+    <lastmod>2019-05-19T21:02:18+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kdf9000.github.io/post/%E8%B4%AA%E5%90%83%E8%9B%87/</loc>
+    <lastmod>2019-05-19T21:02:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kdf9000.github.io/post/blog/</loc>
+    <lastmod>2018-10-22T17:31:06+08:00</lastmod>
   </url>
   
   <url>

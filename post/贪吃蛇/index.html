@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>【转载】纯C贪吃蛇 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://kdf9000.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="【转载】纯C贪吃蛇"/>
+<meta name="twitter:description" content="作者：隔壁的二大爷
+来源：CSDN
+原文：https://blog.csdn.net/qq_40953281/article/details/79315254
+版权声明：本文为博主原创文章，转载请附上博文链接！
+#include&lt;stdio.h&gt; #include&lt;string.h&gt; #include&lt;Windows.h&gt; #include&lt;time.h&gt; #include&lt;conio.h&gt; #define up &#39;w&#39; #define down &#39;s&#39; #define left &#39;a&#39; #define right &#39;d&#39; #define stop &#39;p&#39; void welcome(); //55开始界面 void Finish(); //291结束界面 void creatgraph(); //69围墙打印 void gotoxy(int x, int y); //111光标跳转，横为X 0,1,2.. void gotoprint(int x, int y); //121跳转打印 void gotodelete(int x, int y);//127跳转删除 void creatfood(); //133食物产生 int ClickControl(); //157获取键盘信号 int Judge(); //270游戏结束判断 void MovingBody(); //172蛇的移动 void Eating(); //223蛇吃到东西后的操作（伸长） void ChangeBody(int a,int b); //245蛇的坐标变换,后一个复制前一个STRUCT,a,b为head之前坐标 /*全局变量 &#43; 预处理：*/ typedef struct Snakes { int x; int y; struct Snakes *next; }snake; snake *head,*tail; struct Food { int x; int y; }food; char name[20]; int score = 0; char click = 1; int speed; /************************************************************/ int main() { system(&quot;color 0B&quot;); welcome(); creatgraph(); creatfood(); if (ClickControl() == 0) return 0; return 0; } /**********************************************************/ void welcome() { gotoxy(15,10); printf(&quot;/**********************************************/&quot;); gotoxy(15, 20); printf(&quot;/**********************************************/&quot;); gotoxy(20, 13); printf(&quot;WELCOME TO THE GAME OF RETRO SNAKE&quot;); gotoxy(14, 16); printf(&quot;请在英文输入法中操作，反向移动等同于吃到自己，wasd控制p暂停&quot;); gotoxy(20, 18); printf(&quot;PLEASE ENTER YOUR NAME:&quot;); scanf(&quot;%s&quot;, &amp;name,10); system(&quot;cls&quot;); } /**********************************************************/ void creatgraph() { int i; for (i = 0; i&lt;58; i &#43;= 2)//打印上下边框 { gotoprint(i, 0); gotoprint(i, 26); } for (i = 1; i &lt; 26; i&#43;&#43;) { gotoprint(0, i); gotoprint(56, i); } gotoxy(63, 10); printf(&quot;hello %s,Welcome To Play&quot;,name); gotoxy(63, 15); printf(&quot;Your Score Is:%d =￣ω￣= &quot;,score); gotoxy(63, 20); printf(&quot;This Game Is Created By JOKER&quot;); head = (snake*)malloc(sizeof(snake)); head-&gt;x = 16; head-&gt;y = 15; //gotoprint(head-&gt;x, head-&gt;y); tail = (snake*)malloc(sizeof(snake)); snake *p = (snake*)malloc(sizeof(snake)); snake *q = (snake*)malloc(sizeof(snake)); p-&gt;x = 16; p-&gt;y = 16; q-&gt;x = 16; q-&gt;y = 17; head-&gt;next = p; p-&gt;next = q; q-&gt;next = tail; //gotoprint(p-&gt;x, p-&gt;y); //gotoprint(q-&gt;x, q-&gt;y); tail-&gt;next = NULL; tail-&gt;x = 4; tail-&gt;y = 2; } /**********************************************************/ void gotoxy(int x, int y) { COORD pos; HANDLE hOutput; pos."/>
+
+    <meta property="og:title" content="【转载】纯C贪吃蛇" />
+<meta property="og:description" content="作者：隔壁的二大爷
+来源：CSDN
+原文：https://blog.csdn.net/qq_40953281/article/details/79315254
+版权声明：本文为博主原创文章，转载请附上博文链接！
+#include&lt;stdio.h&gt; #include&lt;string.h&gt; #include&lt;Windows.h&gt; #include&lt;time.h&gt; #include&lt;conio.h&gt; #define up &#39;w&#39; #define down &#39;s&#39; #define left &#39;a&#39; #define right &#39;d&#39; #define stop &#39;p&#39; void welcome(); //55开始界面 void Finish(); //291结束界面 void creatgraph(); //69围墙打印 void gotoxy(int x, int y); //111光标跳转，横为X 0,1,2.. void gotoprint(int x, int y); //121跳转打印 void gotodelete(int x, int y);//127跳转删除 void creatfood(); //133食物产生 int ClickControl(); //157获取键盘信号 int Judge(); //270游戏结束判断 void MovingBody(); //172蛇的移动 void Eating(); //223蛇吃到东西后的操作（伸长） void ChangeBody(int a,int b); //245蛇的坐标变换,后一个复制前一个STRUCT,a,b为head之前坐标 /*全局变量 &#43; 预处理：*/ typedef struct Snakes { int x; int y; struct Snakes *next; }snake; snake *head,*tail; struct Food { int x; int y; }food; char name[20]; int score = 0; char click = 1; int speed; /************************************************************/ int main() { system(&quot;color 0B&quot;); welcome(); creatgraph(); creatfood(); if (ClickControl() == 0) return 0; return 0; } /**********************************************************/ void welcome() { gotoxy(15,10); printf(&quot;/**********************************************/&quot;); gotoxy(15, 20); printf(&quot;/**********************************************/&quot;); gotoxy(20, 13); printf(&quot;WELCOME TO THE GAME OF RETRO SNAKE&quot;); gotoxy(14, 16); printf(&quot;请在英文输入法中操作，反向移动等同于吃到自己，wasd控制p暂停&quot;); gotoxy(20, 18); printf(&quot;PLEASE ENTER YOUR NAME:&quot;); scanf(&quot;%s&quot;, &amp;name,10); system(&quot;cls&quot;); } /**********************************************************/ void creatgraph() { int i; for (i = 0; i&lt;58; i &#43;= 2)//打印上下边框 { gotoprint(i, 0); gotoprint(i, 26); } for (i = 1; i &lt; 26; i&#43;&#43;) { gotoprint(0, i); gotoprint(56, i); } gotoxy(63, 10); printf(&quot;hello %s,Welcome To Play&quot;,name); gotoxy(63, 15); printf(&quot;Your Score Is:%d =￣ω￣= &quot;,score); gotoxy(63, 20); printf(&quot;This Game Is Created By JOKER&quot;); head = (snake*)malloc(sizeof(snake)); head-&gt;x = 16; head-&gt;y = 15; //gotoprint(head-&gt;x, head-&gt;y); tail = (snake*)malloc(sizeof(snake)); snake *p = (snake*)malloc(sizeof(snake)); snake *q = (snake*)malloc(sizeof(snake)); p-&gt;x = 16; p-&gt;y = 16; q-&gt;x = 16; q-&gt;y = 17; head-&gt;next = p; p-&gt;next = q; q-&gt;next = tail; //gotoprint(p-&gt;x, p-&gt;y); //gotoprint(q-&gt;x, q-&gt;y); tail-&gt;next = NULL; tail-&gt;x = 4; tail-&gt;y = 2; } /**********************************************************/ void gotoxy(int x, int y) { COORD pos; HANDLE hOutput; pos." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kdf9000.github.io/post/%E8%B4%AA%E5%90%83%E8%9B%87/" />
+<meta property="article:published_time" content="2019-05-19T21:02:18&#43;08:00"/>
+<meta property="article:modified_time" content="2019-05-19T21:02:18&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://kdf9000.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">【转载】纯C贪吃蛇</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 19, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>作者：隔壁的二大爷</p>
+
+<p>来源：CSDN</p>
+
+<p>原文：<a href="https://blog.csdn.net/qq_40953281/article/details/79315254">https://blog.csdn.net/qq_40953281/article/details/79315254</a></p>
+
+<p>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
+
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;Windows.h&gt;
+#include&lt;time.h&gt;
+#include&lt;conio.h&gt;
+
+#define up 'w'
+#define down 's'
+#define left 'a'
+#define right 'd'
+#define stop 'p'
+
+void welcome();               //55开始界面
+void Finish();                //291结束界面
+void creatgraph();            //69围墙打印
+void gotoxy(int x, int y);    //111光标跳转，横为X 0,1,2..
+void gotoprint(int x, int y); //121跳转打印
+void gotodelete(int x, int y);//127跳转删除
+void creatfood();             //133食物产生
+int ClickControl();           //157获取键盘信号
+int Judge();                  //270游戏结束判断
+void MovingBody();      //172蛇的移动 
+void Eating();                //223蛇吃到东西后的操作（伸长）
+void ChangeBody(int a,int b); //245蛇的坐标变换,后一个复制前一个STRUCT,a,b为head之前坐标 
+
+/*全局变量 + 预处理：*/
+typedef struct Snakes
+{
+    int x;
+    int y;
+    struct Snakes *next;
+}snake;
+
+snake *head,*tail;
+
+struct Food
+{
+    int x;
+    int y;
+}food;
+char name[20];
+int score = 0;
+char click = 1;
+int speed;
+
+/************************************************************/
+
+int main()
+{
+    system(&quot;color 0B&quot;);
+    welcome();
+    creatgraph();
+    creatfood();
+    if (ClickControl() == 0) return 0;
+    return 0;
+}
+
+/**********************************************************/
+void welcome()
+{
+    gotoxy(15,10);
+    printf(&quot;/**********************************************/&quot;);
+    gotoxy(15, 20);
+    printf(&quot;/**********************************************/&quot;);
+    gotoxy(20, 13);
+    printf(&quot;WELCOME TO THE GAME OF RETRO SNAKE&quot;);
+    gotoxy(14, 16);
+    printf(&quot;请在英文输入法中操作，反向移动等同于吃到自己，wasd控制p暂停&quot;);
+    gotoxy(20, 18);
+    printf(&quot;PLEASE ENTER YOUR NAME:&quot;);
+    scanf(&quot;%s&quot;, &amp;name,10);
+    system(&quot;cls&quot;);
+}
+/**********************************************************/
+void creatgraph()             
+{
+    int i;
+    for (i = 0; i&lt;58; i += 2)//打印上下边框
+    {
+        gotoprint(i, 0);
+        gotoprint(i, 26);
+    }
+    for (i = 1; i &lt; 26; i++)
+    {
+        gotoprint(0, i);
+        gotoprint(56, i);
+    }
+    gotoxy(63, 10);
+    printf(&quot;hello %s,Welcome To Play&quot;,name);
+    gotoxy(63, 15);
+    printf(&quot;Your Score Is:%d    =￣ω￣= &quot;,score);
+    gotoxy(63, 20);
+    printf(&quot;This Game Is Created By JOKER&quot;);
+    head = (snake*)malloc(sizeof(snake));
+    head-&gt;x = 16;
+    head-&gt;y = 15;
+    //gotoprint(head-&gt;x, head-&gt;y);
+    tail = (snake*)malloc(sizeof(snake));
+    snake *p = (snake*)malloc(sizeof(snake));
+    snake *q = (snake*)malloc(sizeof(snake));
+    p-&gt;x = 16;
+    p-&gt;y = 16;
+    q-&gt;x = 16;
+    q-&gt;y = 17;
+    head-&gt;next = p;
+    p-&gt;next = q;
+    q-&gt;next = tail;
+    //gotoprint(p-&gt;x, p-&gt;y);
+    //gotoprint(q-&gt;x, q-&gt;y);
+    tail-&gt;next = NULL;
+    tail-&gt;x = 4;
+    tail-&gt;y = 2;
+
+}
+/**********************************************************/
+void gotoxy(int x, int y)
+{
+    COORD pos;
+    HANDLE hOutput;
+    pos.X = x;
+    pos.Y = y;
+    hOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(hOutput, pos);
+}
+/**********************************************************/
+void gotoprint(int x, int y)
+{
+    gotoxy(x, y);
+    printf(&quot;■&quot;);
+}
+/**********************************************************/
+void gotodelete(int x, int y)
+{
+    gotoxy(x, y);
+    printf(&quot;  &quot;);
+}
+/**********************************************************/
+void creatfood()
+{
+    srand((int)time(NULL));
+    lable:
+    food.y = rand() % (25 - 1 + 1) + 1;
+    food.x = rand() % (54 - 2 + 1) + 2;
+    if (food.x % 2 != 0)
+    {
+        food.x = food.x+1;
+    }
+    snake *judge = head;
+    while (1)  //遍历排除蛇身重复
+    {
+        if (judge-&gt;next == NULL) break;
+        if (food.x == judge-&gt;x&amp;&amp;food.y == judge-&gt;y)
+        {
+            goto lable;
+        }
+        judge = judge-&gt;next;
+    }
+    gotoxy(food.x, food.y);
+    printf(&quot;⊙&quot;);
+}
+/**********************************************************/
+int ClickControl()
+{
+    char c;
+    while (1)
+    {
+        if (Judge()==0) return 0;
+        if (_kbhit())
+        {
+            click = _getch();
+        }
+        MovingBody();
+        Eating();
+    }
+    return 1;
+}
+/**********************************************************/
+void MovingBody()
+{
+    int count = 0;
+    int a = head-&gt;x, b = head-&gt;y;
+    snake *p = head;
+    //通过先清空后打印实现动画效果
+    while (1)
+    {
+        if (p-&gt;next == NULL) break;
+        gotodelete(p-&gt;x, p-&gt;y);
+        count++;
+        p = p-&gt;next;
+    }
+    switch (click)
+    {
+        case up:
+            head-&gt;y -= 1;
+            ChangeBody(a,b);
+            break;
+        case down:
+            head-&gt;y += 1;
+            ChangeBody(a,b);
+            break;
+        case left:
+            head-&gt;x -= 2;
+            ChangeBody(a,b);
+            break;
+        case right:
+            head-&gt;x += 2;
+            ChangeBody(a,b);
+            break;
+        case stop:
+            _getch();
+            break;
+    }
+    p = head;
+    while (1)
+    {
+        if (p-&gt;next == NULL) break;
+        gotoprint(p-&gt;x, p-&gt;y);
+        p = p-&gt;next;
+    }
+    p = head;
+    gotoxy(0, 28);
+    if (count &lt;= 10) speed = 150;
+    else if (count &gt; 10 &amp;&amp; count &lt;= 20) speed = 100;
+    else if (count &gt; 20 &amp;&amp; count &lt;= 40) speed = 50;
+    else speed = 10;
+    Sleep(speed);
+}
+/**********************************************************/
+void Eating()
+{
+    if (head-&gt;x == food.x&amp;&amp;head-&gt;y == food.y)
+    {
+        creatfood();
+        snake *_new = (snake*)malloc(sizeof(snake));
+        snake *p;
+        p = head;
+        while (1)
+        {
+            if (p-&gt;next-&gt;next == NULL) break;
+            p = p-&gt;next;
+        }
+        p-&gt;next = _new;
+        _new-&gt;next = tail;
+        score += 10;
+        gotoxy(77, 15);
+        printf(&quot;%d&quot;, score);
+    }
+}
+/**********************************************************/
+void ChangeBody(int a,int b)
+{
+    snake *p = head-&gt;next;
+    int mid1, mid2,_mid1,_mid2;
+    mid1 = p-&gt;x;
+    mid2 = p-&gt;y;
+    while (1)
+    {
+        if (p-&gt;next-&gt;next == NULL) break;
+        _mid1 = p-&gt;next-&gt;x;
+        _mid2 = p-&gt;next-&gt;y;
+        p-&gt;next-&gt;x = mid1;
+        p-&gt;next-&gt;y = mid2;
+        mid1 = _mid1;
+        mid2 = _mid2; 
+        p = p-&gt;next;
+    }
+    p = head-&gt;next;
+    //if (p-&gt;next!= NULL)
+    {
+        p-&gt;x = a;
+        p-&gt;y = b;
+    }
+}
+/**********************************************************/
+int Judge()
+{
+    if (head-&gt;x == 0|| head-&gt;x == 56 || head-&gt;y == 0 || head-&gt;y == 26)
+    {
+        Finish();
+        return 0;
+    }
+    snake *p = head-&gt;next;
+    while (1)
+    {
+        if (p-&gt;next == NULL) break;
+        if (head-&gt;x == p-&gt;x&amp;&amp;head-&gt;y == p-&gt;y)
+        {
+            Finish();
+            return 0;
+        }
+        p = p-&gt;next;
+    }
+    return 1;
+}
+/**********************************************************/
+void Finish()
+{
+    system(&quot;cls&quot;);
+    gotoxy(15, 10);
+    printf(&quot;/**********************************************/&quot;);
+    gotoxy(15, 20);
+    printf(&quot;/**********************************************/&quot;);
+    gotoxy(18, 14);
+    printf(&quot;GAME   OVER      o(*￣▽￣*)o&quot;);
+    gotoxy(20, 16);
+    printf(&quot;Your Score is %d    hiahiahia&quot;, score);
+    gotoxy(18, 18);
+    printf(&quot;还不错哦，     继续努力O(∩_∩)O&quot;);
+    gotoxy(0, 27);
+    system(&quot;pause&quot;);
+}
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
