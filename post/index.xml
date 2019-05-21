@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on CK_D</title>
-    <link>htpps://kdf9000.github.io/post/</link>
+    <link>https://kdf9000.github.io/post/</link>
     <description>Recent content in Posts on CK_D</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 May 2019 08:23:42 +0800</lastBuildDate>
     
-	<atom:link href="htpps://kdf9000.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kdf9000.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Self-study  Notes of PLAY WITH DATA STRUCTURE</title>
-      <link>htpps://kdf9000.github.io/post/structure/</link>
+      <link>https://kdf9000.github.io/post/structure/</link>
       <pubDate>Tue, 21 May 2019 08:23:42 +0800</pubDate>
       
-      <guid>htpps://kdf9000.github.io/post/structure/</guid>
+      <guid>https://kdf9000.github.io/post/structure/</guid>
       <description>第一章 数据结构绪论
 ·基本概念和术语 数据：计算机中可以操作的对象，能被计算机识别并处理的符号集合 数据对象：性质相同的数据元素的集合，是数据的子集 数据元素：组成数据的基本单位，建立数据模型的着眼点(如人类中的人，畜类中的牛、羊) 数据项：组成数据元素的最小单位(如“人”这一数据元素中的眼耳口鼻或年龄性别等) 数据结构：相互之间存在一种或多种特定关系的数据元素的集合 ·逻辑结构与物理结构 数据结构分为逻辑结构和物理结构 逻辑结构(面向问题) 集合：数据元素同属于一个集合，之间没有其他关系 线性：数据结构是一对一关系 树形：数据结构是一对多关系 图形：数据结构是多对多关系 物理结构(面向计算机) 顺序：把数据元素存放在地址连续的存储单元里，其数据间的逻辑关系和物理关系是一致的 链式：把数据元素存放在任意的存储单元里，通过指针存放的地址找到相关联的数据元素的位置 ·抽象数据类型 数据类型：一组性质相同的值的集合及定义在此集合上的一些操作的总称 抽象数据类型：一个数学模型及定义在该模型上的一组操作  第二章 算法
 ·算法定义 算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，而且每一条指令表示一个或多个操作 ·算法的特性 输入：算法具有零个或多个输入 输出：算法至少有一个输出 有穷性：算法在执行有限的步骤后，自动结束而不会出现无限循环，并且每一个步骤在可接受的时间内完成 确定性：算法的每一步骤都具有确定的含义，不会出现二义性 可行性：算法的每一步都必须是可行的，也就是说，每一步都能够通过执行有限次数完成 ·算法的设计要求 正确性：算法至少应该具有输入、输出和加工处理无歧义性、能正确反映问题的需求、能够得到问题的正确答案 (一般标准：算法没有语法错误，对合法的输入数据能够产生满足要求的输出结果，对非法的输入数据能够得出满足规格说明的结果) 可读性：算法设计应当便于人们阅读、理解和交流 健壮性：当输入数据不合法时，算法也能做出相关处理，而不是产生异常或莫名其妙的结果 时间效率高和存储量低：算法的执行时间应该尽可能短，需要的存储空间应该尽可能小 ·算法效率的度量方法 在分析一个程序的运算时间时，最重要的是把程序看成是独立于程序设计语言的算法或一系列步骤 在分析一个算法的运行时间时，最重要的是基本操作的数量与输入规模关联起来，即基本操作的数量必须表示成输入规模的函数 即f(输入规模) = 操作次数 ·算法的时间复杂度 定义：在进行算法分析时，语句总的执行次数T(n)是关于问题规模n的函数，进而分析T(n)随n的变化情况并确定T(n)的数量级。 算法的时间复杂度，也就是算法的时间量度，记作：T(n) = O(f(n))。它表示随问题规模n的增大， 算法执行时间的增长率和f(n)的增长率相同，称作算法的渐进时间复杂度，简称为时间复杂度。 其中f(n)是问题规模n的某个函数。 一般情况下，随着n的增大，T(n)增长最慢的算法为最优算法 推导大O阶的方法： 1.用常数1取代运行时间中的所有加法常数 2.在修改后的运行次数函数中，只保留最高阶项 3.如果最高阶项存在且不是1，则去除它的系数 得到的结果就是大O阶 常数阶：对于分支结构而言，无论真假，执行的次数都是恒定的，所以单纯的分支结构(不包含在循环结构中)，其时间复杂度也是O(1) 平方阶：循环的时间复杂度等于循环体(内层循环、函数、语句等)的复杂度乘以该循环的运行次数 对于相对复杂的语句块，应先将执行次数求和，再推导大O阶 常见时间复杂度排序(由小到大)： O(1) ＜ O(logn) ＜ O(n) ＜ O(nlogn) ＜ O(n^2) ＜ O(n^3) ＜ O(2^n) ＜ O(n!</description>
@@ -23,19 +23,19 @@
     
     <item>
       <title>Self-study Notes of C</title>
-      <link>htpps://kdf9000.github.io/post/c%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
+      <link>https://kdf9000.github.io/post/c%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 20 May 2019 16:45:43 +0800</pubDate>
       
-      <guid>htpps://kdf9000.github.io/post/c%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://kdf9000.github.io/post/c%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/</guid>
       <description>C 【杂项】 省略部分： 文件、宏定义等C语言独有的元素 养成习惯： 注重格式规范，写时间，功能，目的，软件和输出结果，总结…… 看懂程序分三步： 1.流程 2.每个语句的功能 3.试数 试数原则(类似数学程序框图题)： 1.按语句执行流程进行试数 2.写整齐、详细(按循环次数分组，各环节结果均要写出) 3.试数五次之内即可看懂程序 举例： 【看懂这个1： 功能：从键盘输入一个数，判断该数是否为回文数 int val;//用val存放输入的数 int m; int sum = 0; printf (&amp;quot;请输入待判断的数字：&amp;quot;); scanf (&amp;quot;%d&amp;quot;, &amp;amp;val); m = val; while (m) { sum = sum * 10 + m % 10; m /= 10; } if (sum == val) printf (&amp;quot;Yes&amp;quot;); else printf (&amp;quot;No&amp;quot;); //sum/10以int型保存(精髓！)并巧妙地结合了C语言对真假的数字判断(精髓！)】 【看懂这个2： 功能：求斐波那契数列(n项等于n-2项与n-1项的和)的第n项 int n;//输入值 int f1, f2, f3; int i;//计数器 f1 = 1;//第n-2项 f2 = 2;//第n-1项 printf (&amp;quot;请输入需要求的项数：&amp;quot;); scanf (&amp;quot;%d&amp;quot;, &amp;amp;n); if (1 == n) f3 = 1; else if (2 == n) f3 = 2; else for (i = 3; i &amp;lt;= n; ++i) { f3 = f1 + f2; f1 = f2; f2 = f3;//项数+1 }//从第三项起求至第n项 printf (&amp;quot;%d&amp;quot;, f3);】 【看懂这个3： #include &amp;lt;stdio.</description>
     </item>
     
     <item>
       <title>【转载】纯C贪吃蛇</title>
-      <link>htpps://kdf9000.github.io/post/%E8%B4%AA%E5%90%83%E8%9B%87/</link>
+      <link>https://kdf9000.github.io/post/%E8%B4%AA%E5%90%83%E8%9B%87/</link>
       <pubDate>Sun, 19 May 2019 21:02:18 +0800</pubDate>
       
-      <guid>htpps://kdf9000.github.io/post/%E8%B4%AA%E5%90%83%E8%9B%87/</guid>
+      <guid>https://kdf9000.github.io/post/%E8%B4%AA%E5%90%83%E8%9B%87/</guid>
       <description>作者：隔壁的二大爷
 来源：CSDN
 原文：https://blog.csdn.net/qq_40953281/article/details/79315254
@@ -45,10 +45,10 @@
     
     <item>
       <title>My First Program</title>
-      <link>htpps://kdf9000.github.io/post/my-first-program/</link>
+      <link>https://kdf9000.github.io/post/my-first-program/</link>
       <pubDate>Mon, 22 Oct 2018 17:31:06 +0800</pubDate>
       
-      <guid>htpps://kdf9000.github.io/post/my-first-program/</guid>
+      <guid>https://kdf9000.github.io/post/my-first-program/</guid>
       <description>#include &amp;lt;stdio.h&amp;gt; #include &amp;lt;windows.h&amp;gt; int main (void) { printf (&amp;quot;欢迎使用身份证号合法性检验工具v3.1，该工具能帮助您检验身份证号的合法性\n&amp;quot;); comeback: int k;//计数器 char n[18]; printf (&amp;quot;请输入欲检验的身份证号：\n&amp;quot;); scanf (&amp;quot;%c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c&amp;quot;, &amp;amp;n[0], &amp;amp;n[1], &amp;amp;n[2], &amp;amp;n[3], &amp;amp;n[4], &amp;amp;n[5], &amp;amp;n[6], &amp;amp;n[7], &amp;amp;n[8], &amp;amp;n[9], &amp;amp;n[10], &amp;amp;n[11], &amp;amp;n[12], &amp;amp;n[13], &amp;amp;n[14], &amp;amp;n[15], &amp;amp;n[16], &amp;amp;n[17]); char ch; while ( ( ch = getchar( ) ) != &#39;\n&#39;) continue; for (k = 0; k &amp;lt; 18; k++) { n[k] = n[k]-48; };//将ASCII码转化为数字 int sheng = n[0]*10+n[1];//计算省级编码 int shi = n[2]*10+n[3];//计算市级编码 int xian = n[4]*10+n[5];//计算县级编码 if(sheng&amp;lt;11||(sheng&amp;gt;15&amp;amp;&amp;amp;sheng&amp;lt;21)||(sheng&amp;gt;23&amp;amp;&amp;amp;sheng&amp;lt;31)||(sheng&amp;gt;37&amp;amp;&amp;amp;sheng&amp;lt;41)||(sheng&amp;gt;46&amp;amp;&amp;amp;sheng&amp;lt;50)||(sheng&amp;gt;54&amp;amp;&amp;amp;sheng&amp;lt;61)||(sheng&amp;gt;65&amp;amp;&amp;amp;sheng&amp;lt;81)||sheng&amp;gt;83) printf (&amp;quot;请输入合法的省级编码！除非您不是中国公民。\n&amp;quot;);//判断省级编码的合法性 else if (shi&amp;lt;1||shi&amp;gt;70) printf (&amp;quot;请输入合法的市级编码！除非您不是中国公民。\n&amp;quot;);//判断市级编码的合法性 else if (xian&amp;lt;1||(xian&amp;gt;18&amp;amp;&amp;amp;xian&amp;lt;21)||xian&amp;gt;99) printf (&amp;quot;请输入合法的县级编码！除非您不是中国公民。\n&amp;quot;);//判断县级编码的合法性 else if ((n[6]*1000+n[7]*100+n[8]*10+n[9])&amp;lt;1900||(n[6]*1000+n[7]*100+n[8]*10+n[9])&amp;gt;2018) printf (&amp;quot;请输入正确的出生年份！除非您是穿越者。\n&amp;quot;);//判断年份编码的合法性 else if ((n[10]*10+n[11])&amp;lt;1||(n[10]*10+n[11])&amp;gt;12) printf (&amp;quot;请输入正确的出生月份！除非您在使用古巴比伦历。\n&amp;quot;);//判断月份编码的合法性 else if ((n[12]*10+n[13])&amp;lt;1||(n[12]*10+n[13])&amp;gt;31) printf (&amp;quot;请输入正确的出生日期！除非您在使用古巴比伦历。\n&amp;quot;); //判断日期编码的合法性 else { n[0] = n[0]*7; n[1] = n[1]*9; n[2] = n[2]*10; n[3] = n[3]*5; n[4] = n[4]*8; n[5] = n[5]*4; n[6] = n[6]*2; n[7] = n[7]*1; n[8] = n[8]*6; n[9] = n[9]*3; n[10] = n[10]*7; n[11] = n[11]*9; n[12] = n[12]*10; n[13] = n[13]*5; n[14] = n[14]*8; n[15] = n[15]*4; n[16] = n[16]*2; int jym = n[0]+n[1]+n[2]+n[3]+n[4]+n[5]+n[6]+n[7]+n[8]+n[9]+n[10]+n[11]+n[12]+n[13]+n[14]+n[15]+n[16]; jym = jym % 11;//取余 int zjym;//存放 由用户输入的末位校验码反推的余数 switch (n[17]) { case 0: zjym = 1; break; case 1: zjym = 0; break; case 2: zjym = 10; break; case 3: zjym = 9; break; case 4: zjym = 8; break; case 5: zjym = 7; break; case 6: zjym = 6; break; case 7: zjym = 5; break; case 8: zjym = 4; break; case 9: zjym = 3; break; case 72: case 40: zjym = 2; break; default: printf (&amp;quot;请输入合法的末位数字！\n&amp;quot;); break; }//由用户输入的末位校验码反推余数 if (jym == zjym) printf (&amp;quot;该身份证号合法！\n&amp;quot;); else printf (&amp;quot;该身份证号非法！\n&amp;quot;); }//结束else system (&amp;quot;pause&amp;quot;); goto comeback; return 0; }  </description>
     </item>
     
