@@ -5,19 +5,21 @@
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.55.6" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
+    <meta name="author" content="Dong Chengkun" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://kdf9000.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="https://dongchengkun.top/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
 
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Self-study Notes of C"/>
-<meta name="twitter:description" content="C 【杂项】 省略部分： 文件、宏定义等C语言独有的元素 养成习惯： 注重格式规范，写时间，功能，目的，软件和输出结果，总结…… 看懂程序分三步： 1.流程 2.每个语句的功能 3.试数 试数原则(类似数学程序框图题)： 1.按语句执行流程进行试数 2.写整齐、详细(按循环次数分组，各环节结果均要写出) 3.试数五次之内即可看懂程序 举例： 【看懂这个1： 功能：从键盘输入一个数，判断该数是否为回文数 int val;//用val存放输入的数 int m; int sum = 0; printf (&quot;请输入待判断的数字：&quot;); scanf (&quot;%d&quot;, &amp;val); m = val; while (m) { sum = sum * 10 &#43; m % 10; m /= 10; } if (sum == val) printf (&quot;Yes&quot;); else printf (&quot;No&quot;); //sum/10以int型保存(精髓！)并巧妙地结合了C语言对真假的数字判断(精髓！)】 【看懂这个2： 功能：求斐波那契数列(n项等于n-2项与n-1项的和)的第n项 int n;//输入值 int f1, f2, f3; int i;//计数器 f1 = 1;//第n-2项 f2 = 2;//第n-1项 printf (&quot;请输入需要求的项数：&quot;); scanf (&quot;%d&quot;, &amp;n); if (1 == n) f3 = 1; else if (2 == n) f3 = 2; else for (i = 3; i &lt;= n; &#43;&#43;i) { f3 = f1 &#43; f2; f1 = f2; f2 = f3;//项数&#43;1 }//从第三项起求至第n项 printf (&quot;%d&quot;, f3);】 【看懂这个3： #include &lt;stdio."/>
+<meta name="twitter:description" content="【杂项】
+养成习惯： 注重格式规范，写时间，功能，目的，软件和输出结果，总结…… 看懂程序分三步： 1.流程 2.每个语句的功能 3.试数 试数原则(类似数学程序框图题)： 1.按语句执行流程进行试数 2.写整齐、详细(按循环次数分组，各环节结果均要写出) 3.试数五次之内即可看懂程序 举例： 【看懂这个1： 功能：从键盘输入一个数，判断该数是否为回文数 int val;//用val存放输入的数 int m; int sum = 0; printf (&quot;请输入待判断的数字：&quot;); scanf (&quot;%d&quot;, &amp;val); m = val; while (m) { sum = sum * 10 &#43; m % 10; m /= 10; } if (sum == val) printf (&quot;Yes&quot;); else printf (&quot;No&quot;); //sum/10以int型保存(精髓！)并巧妙地结合了C语言对真假的数字判断(精髓！)】 【看懂这个2： 功能：求斐波那契数列(n项等于n-2项与n-1项的和)的第n项 int n;//输入值 int f1, f2, f3; int i;//计数器 f1 = 1;//第n-2项 f2 = 2;//第n-1项 printf (&quot;请输入需要求的项数：&quot;); scanf (&quot;%d&quot;, &amp;n); if (1 == n) f3 = 1; else if (2 == n) f3 = 2; else for (i = 3; i &lt;= n; &#43;&#43;i) { f3 = f1 &#43; f2; f1 = f2; f2 = f3;//项数&#43;1 }//从第三项起求至第n项 printf (&quot;%d&quot;, f3);】 【看懂这个3： #include &lt;stdio."/>
 
     <meta property="og:title" content="Self-study Notes of C" />
-<meta property="og:description" content="C 【杂项】 省略部分： 文件、宏定义等C语言独有的元素 养成习惯： 注重格式规范，写时间，功能，目的，软件和输出结果，总结…… 看懂程序分三步： 1.流程 2.每个语句的功能 3.试数 试数原则(类似数学程序框图题)： 1.按语句执行流程进行试数 2.写整齐、详细(按循环次数分组，各环节结果均要写出) 3.试数五次之内即可看懂程序 举例： 【看懂这个1： 功能：从键盘输入一个数，判断该数是否为回文数 int val;//用val存放输入的数 int m; int sum = 0; printf (&quot;请输入待判断的数字：&quot;); scanf (&quot;%d&quot;, &amp;val); m = val; while (m) { sum = sum * 10 &#43; m % 10; m /= 10; } if (sum == val) printf (&quot;Yes&quot;); else printf (&quot;No&quot;); //sum/10以int型保存(精髓！)并巧妙地结合了C语言对真假的数字判断(精髓！)】 【看懂这个2： 功能：求斐波那契数列(n项等于n-2项与n-1项的和)的第n项 int n;//输入值 int f1, f2, f3; int i;//计数器 f1 = 1;//第n-2项 f2 = 2;//第n-1项 printf (&quot;请输入需要求的项数：&quot;); scanf (&quot;%d&quot;, &amp;n); if (1 == n) f3 = 1; else if (2 == n) f3 = 2; else for (i = 3; i &lt;= n; &#43;&#43;i) { f3 = f1 &#43; f2; f1 = f2; f2 = f3;//项数&#43;1 }//从第三项起求至第n项 printf (&quot;%d&quot;, f3);】 【看懂这个3： #include &lt;stdio." />
+<meta property="og:description" content="【杂项】
+养成习惯： 注重格式规范，写时间，功能，目的，软件和输出结果，总结…… 看懂程序分三步： 1.流程 2.每个语句的功能 3.试数 试数原则(类似数学程序框图题)： 1.按语句执行流程进行试数 2.写整齐、详细(按循环次数分组，各环节结果均要写出) 3.试数五次之内即可看懂程序 举例： 【看懂这个1： 功能：从键盘输入一个数，判断该数是否为回文数 int val;//用val存放输入的数 int m; int sum = 0; printf (&quot;请输入待判断的数字：&quot;); scanf (&quot;%d&quot;, &amp;val); m = val; while (m) { sum = sum * 10 &#43; m % 10; m /= 10; } if (sum == val) printf (&quot;Yes&quot;); else printf (&quot;No&quot;); //sum/10以int型保存(精髓！)并巧妙地结合了C语言对真假的数字判断(精髓！)】 【看懂这个2： 功能：求斐波那契数列(n项等于n-2项与n-1项的和)的第n项 int n;//输入值 int f1, f2, f3; int i;//计数器 f1 = 1;//第n-2项 f2 = 2;//第n-1项 printf (&quot;请输入需要求的项数：&quot;); scanf (&quot;%d&quot;, &amp;n); if (1 == n) f3 = 1; else if (2 == n) f3 = 2; else for (i = 3; i &lt;= n; &#43;&#43;i) { f3 = f1 &#43; f2; f1 = f2; f2 = f3;//项数&#43;1 }//从第三项起求至第n项 printf (&quot;%d&quot;, f3);】 【看懂这个3： #include &lt;stdio." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kdf9000.github.io/post/c%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" />
+<meta property="og:url" content="https://dongchengkun.top/post/c%E8%AF%AD%E8%A8%80%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0/" />
 <meta property="article:published_time" content="2019-05-20T16:45:43&#43;08:00"/>
 <meta property="article:modified_time" content="2019-05-20T16:45:43&#43;08:00"/>
 
@@ -25,9 +27,9 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://kdf9000.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <a href="https://dongchengkun.top"><img class="app-header-avatar" src="/avatar.jpg" alt="Dong Chengkun" /></a>
       <h1>CK_D</h1>
-      <p>Is this a recursion?	https://kdf9000.github.io/</p>
+      <p>┑(￣Д ￣)┍ I love the f**king data structure</p>
       <div class="app-header-social">
         
           <a target="_blank" href="https://github.com/kdf9000"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
@@ -59,12 +61,9 @@
         </div></div>
     </header>
     <div class="post-content">
-      <pre><code>C
-【杂项】
-省略部分：
-文件、宏定义等C语言独有的元素
+      <p>【杂项】</p>
 
-养成习惯：
+<pre><code>养成习惯：
 注重格式规范，写时间，功能，目的，软件和输出结果，总结……
 
 看懂程序分三步：
@@ -432,13 +431,12 @@ int main (void)
 #ifndef PI
     define PI 3.14
 #endif】
+</code></pre>
 
+<p>【流程控制】
+    1.什么是流程控制？  是语句执行的优先级</p>
 
-
-【流程控制】
-1.什么是流程控制？  是语句执行的优先级
-
-2.流程控制的分类
+<pre><code>2.流程控制的分类
 ·顺序
 ·选择
     定义：某些语句可能执行，也可能不执行，即有选择地执行
@@ -733,34 +731,35 @@ if (3&gt;2)
     else
         printf (&quot;B\n&quot;);
 错因：if语句与esle语句间要用分号间隔】
+</code></pre>
 
-【数组】
-·为什么需要数组：
-1.为解决大量同类型数据的存储和使用的问题。
-2.为了模拟现实世界
-·数组的分类
-一维数组(线)：int a[25]; //25个元素的轴
-二维数组(面)：int a[8][6]; //8行6列的面
-多维数组(少见)：n维数组可以理解为每个元素是n-1维数组的一维数组，因为内存是线                性一维的，所以多维数组不存在。(103p)
-·格式：
-Int a[5] = {1, 2, 3, 4, 5}; //a是数组的名字，[5]表示数组元素(即变量)的个数，并且这五个                       元素分别用a[0] a[1] …… a[4]表示，a[i]表示第i+1个元素。
-例：int a [5] =  {1, 2, 3, 4, 5};
-int i;
-for (i = 0; i &lt; 5; i++)
-    printf (&quot;%d &quot;, a[i]);
-//执行结果为：
-1 2 3 4 5
-注：1.所有元素的数据类型必须相同
-2.一旦创建，不能改变大小
-3.元素在内存中连续依次排列
-·一维数组
-怎样定义一维数组：
-为n个变量连续分配储存空间
-所有变量数据类型必须一致
-所有变量所占字节大小必须相等
-例：int a[5];
+<p>【数组】
+    ·为什么需要数组：
+    1.为解决大量同类型数据的存储和使用的问题。
+    2.为了模拟现实世界
+    ·数组的分类
+    一维数组(线)：int a[25]; //25个元素的轴
+    二维数组(面)：int a[8][6]; //8行6列的面
+    多维数组(少见)：n维数组可以理解为每个元素是n-1维数组的一维数组，因为内存是线                性一维的，所以多维数组不存在。(103p)
+    ·格式：
+    Int a[5] = {1, 2, 3, 4, 5}; //a是数组的名字，[5]表示数组元素(即变量)的个数，并且这五个                       元素分别用a[0] a[1] …… a[4]表示，a[i]表示第i+1个元素。
+    例：int a [5] =  {1, 2, 3, 4, 5};
+    int i;
+    for (i = 0; i &lt; 5; i++)
+        printf (&ldquo;%d &ldquo;, a[i]);
+    //执行结果为：
+    1 2 3 4 5
+    注：1.所有元素的数据类型必须相同
+    2.一旦创建，不能改变大小
+    3.元素在内存中连续依次排列
+    ·一维数组
+    怎样定义一维数组：
+    为n个变量连续分配储存空间
+    所有变量数据类型必须一致
+    所有变量所占字节大小必须相等
+    例：int a[5];</p>
 
-有关一维数组的操作：
+<pre><code>有关一维数组的操作：
 1.初始化
 完全初始化
 int a[5] = {1, 2, 3, 4, 5};
@@ -832,30 +831,30 @@ a是占用2个int大小对象的地址
 ①*a == a[0] == &amp;a[0][0]
 ②**a == *&amp;a[0][0]
 ③a[2][1] == *(*(a+2)+1)
+</code></pre>
 
+<p>【函数】
+    为什么需要函数：
+        避免了重复性操作
+        有利于程序的模块化
+        【例：
+        #include <stdio.h>
+        void max(int i, int j)//void表示函数没有返回值，max是函数名，i和j是形参
+        {
+        if (i&gt;j)
+                printf (&ldquo;%d\n&rdquo;, i);
+            else
+                printf (&ldquo;%d\n&rdquo;,j);
+        }
+        int main (void)//编程语言从main函数进入，再用函数名检测函数。void表示不接受任何参数
+        {
+        int a = 1;
+        int b = 2;
+        max(a,b);//max函数调用完毕跳回main函数后，i和j使用的内存会被释放掉
+        return 0;
+        }】</p>
 
-【函数】
-为什么需要函数：
-    避免了重复性操作
-    有利于程序的模块化
-    【例：
-    #include &lt;stdio.h&gt;
-    void max(int i, int j)//void表示函数没有返回值，max是函数名，i和j是形参 
-    {
-    if (i&gt;j)
-            printf (&quot;%d\n&quot;, i);
-        else
-            printf (&quot;%d\n&quot;,j);
-    }
-    int main (void)//编程语言从main函数进入，再用函数名检测函数。void表示不接受任何参数
-    {
-    int a = 1;
-    int b = 2;
-    max(a,b);//max函数调用完毕跳回main函数后，i和j使用的内存会被释放掉
-    return 0;
-    }】
-
-什么叫函数：
+<pre><code>什么叫函数：
     逻辑上：能够完成特定功能的独立的代码块
     物理上：能够接收数据(也可以不接受)//由主调函数发往被调函数
         能够对接收的数据进行处理
@@ -1077,15 +1076,15 @@ g();    //可执行，输出A
     double fabs (double x);   求x的绝对值
 专题：
 递归(118p)(前置知识：栈，在数据结构里讲)
+</code></pre>
 
+<p>【指针变量】
+    概念：
+    指针=地址=内存单元(1bit)的编号
+    指针变量，本质还是变量，普通变量是存储的是一个值，指针变量存放的是其他变量的地址
+    指针和指针变量是两个不同的概念，指针是水，指针变量是杯，但我们叙述时通常会把指针变量简称为指针</p>
 
-【指针变量】
-概念：
-指针=地址=内存单元(1bit)的编号
-指针变量，本质还是变量，普通变量是存储的是一个值，指针变量存放的是其他变量的地址
-指针和指针变量是两个不同的概念，指针是水，指针变量是杯，但我们叙述时通常会把指针变量简称为指针
-
-格式：【int * p;//*是&amp;的逆运算(？)，int *表示p变量只能存放整型变量的地址(是存放地址不是存放变量),int *是数据类型，p是变量名，*p表示以p的内容为地址的变量(*p是p所指向的那个变量)
+<pre><code>格式：【int * p;//*是&amp;的逆运算(？)，int *表示p变量只能存放整型变量的地址(是存放地址不是存放变量),int *是数据类型，p是变量名，*p表示以p的内容为地址的变量(*p是p所指向的那个变量)
     int i = 3; 
     p = &amp;i;/*
         1.p保存了i的地址，因此p指向i
@@ -1498,34 +1497,31 @@ int main (void)
     int * p;//定义了一个名叫p的变量，int *表示p只能存放一个整型数据的地址
 3.指针运算符，该运算符放在已经定义好的指针变量前，如果p是一个已经定义好的指针变量，则*p表示以p的内容为地址的变量
 //int * p; *p = 5;   两个*的含义分别为2和3
+</code></pre>
 
+<p>【链表】
+    术语：
+    头结点：头结点是首结点前面的那个结点，不存放有效数据，设置头结点的目的是方便
+    操作链表：
+    头指针：指向头结点的指针变量【只要确定了头指针，就能确定整个链表】
+    首结点：存放第一个有效数据的结点
+    尾结点：存放最后一个有效数据的结点，尾结点指针一般是空（NULL）
+    结构：结点 = 数据域 + 指针域，数据域储存该结点的有效数据，指针域储存下一结点的地址
+    作用:存储数据时能够不预先分配内存空间，而是在需要时动态申请内存。整个数据穿保存所需的空间可以根据需要扩大或缩小
+    节点结构:
+    1.数据域:存储数据
+    2.指针域:存储下一个节点元素的地址
+    数组与链表的比较：
+    数组：
+    优点：1.存取速度快
+    缺点：1.需要一整块很大的连续空间
+            2.插入和删除元素的效率很低
+    链表：
+    优点：1.插入和删除元素的效率很高
+    2不需要整块的内存空间
+    缺点：1.查找某个位置的元素效率很低</p>
 
-
-
-【链表】
-术语：
-头结点：头结点是首结点前面的那个结点，不存放有效数据，设置头结点的目的是方便
-操作链表：
-头指针：指向头结点的指针变量【只要确定了头指针，就能确定整个链表】
-首结点：存放第一个有效数据的结点
-尾结点：存放最后一个有效数据的结点，尾结点指针一般是空（NULL）
-结构：结点 = 数据域 + 指针域，数据域储存该结点的有效数据，指针域储存下一结点的地址
-作用:存储数据时能够不预先分配内存空间，而是在需要时动态申请内存。整个数据穿保存所需的空间可以根据需要扩大或缩小
-节点结构:
-1.数据域:存储数据
-2.指针域:存储下一个节点元素的地址
-数组与链表的比较：
-数组：
-优点：1.存取速度快
-缺点：1.需要一整块很大的连续空间
-        2.插入和删除元素的效率很低
-链表：
-优点：1.插入和删除元素的效率很高
-2不需要整块的内存空间
-缺点：1.查找某个位置的元素效率很低
-
-
-【例：struct Student{
+<pre><code>【例：struct Student{
     char name [256];
     int age;
     struct Student *link};
@@ -1694,15 +1690,17 @@ int main (void)
 
     return 0;
 } 】
-【结构体】
-为什么需要结构体：
-为了表示一些复杂事物，而普通的基本类型无法满足实际要求。
-什么叫结构体：
-结构体是用户根据实际需要，用基本数据类型复合出的新数据类型
-如何定义结构体：
-#include &lt;stdio.h&gt;
+</code></pre>
 
-//1.常规定义(推荐格式)
+<p>【结构体】
+    为什么需要结构体：
+    为了表示一些复杂事物，而普通的基本类型无法满足实际要求。
+    什么叫结构体：
+    结构体是用户根据实际需要，用基本数据类型复合出的新数据类型
+    如何定义结构体：
+    #include <stdio.h></p>
+
+<pre><code>//1.常规定义(推荐格式)
 struct Student  //没有定义变量，只是定义了一个新的数据类型  
 {
 int age;
@@ -1930,18 +1928,18 @@ int main (void)
     }
 
     return 0;}
+</code></pre>
 
+<p>【字符串】
+    字符串的本质是一个以\0结尾的一维字符数组，因为以\0结尾，所以字符数组的长度比字符量多1
+    对于printf和scanf来说，字符串最重要的是其起始地址，如打印一个字符串:
+    char *text = &ldquo;hey peter&rdquo;;
+    1.printf(text);
+    2.printf(&ldquo;%s&rdquo;m text);
+    printf知道字符串的起始地址就会一直打印下去，遇到&rsquo;\0&rsquo;停止，如:
+    printf(&ldquo;Hello \0 world&rdquo;);只会打印出Hello</p>
 
-【字符串】
-字符串的本质是一个以\0结尾的一维字符数组，因为以\0结尾，所以字符数组的长度比字符量多1
-对于printf和scanf来说，字符串最重要的是其起始地址，如打印一个字符串:
-char *text = &quot;hey peter&quot;;
-1.printf(text);
-2.printf(&quot;%s&quot;m text);
-printf知道字符串的起始地址就会一直打印下去，遇到'\0'停止，如:
-printf(&quot;Hello \0 world&quot;);只会打印出Hello 
-
-字符串的定义与初始化
+<pre><code>字符串的定义与初始化
 字符串字面量:
     &quot;Hello world&quot;   注:字面量是常量，不能被赋值
 
@@ -2064,26 +2062,26 @@ string.h
     printf(&quot;%s &quot;, str);//输出结果:hello0 hello1 hello2 hello3 hello4
     }
 //把字符串和其他类型的变量拼接在一起】
+</code></pre>
 
+<p>【文件】
+    fopen():
+    原型：FILE * fopen(const char *path, const char *mode);
+    //path读取文件路径，mode选择文件使用的模式
+    mode包括：文本文件：r\w\a\r+\w+\a+
+        二进制文件：rb\wb\ab\rb+\wb+\ab+
+    含义：r：只读，用于向程序输入数据，要求文件已经存在，若文件不存在则返回空指针NULL
+        w：只写，用于向文件输出数据，若文件已经存在则将文件删除，否则创建新的空文件
+        a：追加，用于向已存在的文件追加数据，若文件不存在，则提示出错
+        r+:在读的同时写
+        w+:在写的同时读
+    //在r模式下如果文件不存在则无法打开，但在w模式下如果文件不存在会先创建文件
+    //若文件打开成功，fopen()函数将返回指向该文件结构体的指针，若文件打开失败，fopen()函数将返回空指针NULL
+    【   FILE *fp;
+        char buf [SIZE] = &ldquo;你好，我是人工智障爱酱，很高兴见到你，嘻嘻&rdquo;;
+        fp = fopen(&ldquo;C:\Users\user\Desktop\1.txt&rdquo;, &ldquo;w&rdquo;);</p>
 
-【文件】
-fopen():
-原型：FILE * fopen(const char *path, const char *mode);
-//path读取文件路径，mode选择文件使用的模式
-mode包括：文本文件：r\w\a\r+\w+\a+
-    二进制文件：rb\wb\ab\rb+\wb+\ab+
-含义：r：只读，用于向程序输入数据，要求文件已经存在，若文件不存在则返回空指针NULL
-    w：只写，用于向文件输出数据，若文件已经存在则将文件删除，否则创建新的空文件
-    a：追加，用于向已存在的文件追加数据，若文件不存在，则提示出错
-    r+:在读的同时写
-    w+:在写的同时读
-//在r模式下如果文件不存在则无法打开，但在w模式下如果文件不存在会先创建文件
-//若文件打开成功，fopen()函数将返回指向该文件结构体的指针，若文件打开失败，fopen()函数将返回空指针NULL
-【   FILE *fp;
-    char buf [SIZE] = &quot;你好，我是人工智障爱酱，很高兴见到你，嘻嘻&quot;;
-    fp = fopen(&quot;C:\\Users\\user\\Desktop\\1.txt&quot;, &quot;w&quot;);
-
-    fputs(buf, fp);
+<pre><code>    fputs(buf, fp);
 
     fclose(fp);//fopen-w的强制打开
 //fp为文件指针，每一个打开的文件必须对应一个单独的文件指针变量】
