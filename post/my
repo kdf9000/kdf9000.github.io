@@ -1,0 +1,124 @@
+---
+title: "My First Python Program"
+date: 2019-06-24T19:00:58+08:00
+draft: true
+---
+
+'''
+简易人事管理系统
+功能：
+1.以员工为对象实现基础的增删改查
+2.将所有数据保存到本地
+'''
+class Staff:
+    #为员工添加 姓名 和 薪水 属性
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+    def __str__(self):
+        return "员工%s，工资%s" % (self.name, self.salary)
+    
+    #后面并没有真正删除某个员工对象，所以__del__没用上。。。
+    def __del__(self):
+        print("您已成功删除员工%s的信息" % self.name)
+
+#生成列表保存员工对象    
+staff_list = []
+
+#预先生成几个员工凑数
+newstaff1 = Staff("张三", 3700)
+newstaff2 = Staff("李四", 4600)
+newstaff3 = Staff("王五", 5400)
+staff_list.append(newstaff1)
+staff_list.append(newstaff2)
+staff_list.append(newstaff3)
+
+while True:
+    #功能列表
+    print("")
+    print("===========================")
+    print("欢迎使用该人事管理系统")
+    print("1.添加员工信息")
+    print("2.查看员工列表")
+    print("3.修改员工信息")
+    print("4.删除员工信息")
+    print("5.将员工信息保存到D盘根目录")
+    print("6.退出系统")
+    print("")
+    
+    #switch case
+    key = int(input("请输入功能序号："))
+ 
+    #添加信息，生成对象
+    if key == 1:
+        print("您选择了添加员工信息功能")
+        get_name = input("请输入员工姓名：")
+        get_salary = input("请输入员工薪水：")
+        if not get_salary.isdigit():
+            print('添加失败，请输入数字')
+            continue
+        else:
+            newstaff = Staff(get_name, get_salary)
+            staff_list.append(newstaff)
+            print(newstaff)
+
+    #遍历员工列表
+    elif key == 2:
+        print("当前有如下员工：")
+        for member in staff_list:
+            print(member)
+
+    #修改员工信息
+    elif key == 3:
+        print("当前有如下员工：")
+        for member in staff_list:
+            print(member)
+        #接收用户想要修改的员工序号
+        index = int(input("您想修改第几位员工的信息？(请输入数字)"))
+        #staff_list[index - 1]即为欲修改的对象
+        #接收用户想要修改的属性类型
+        index2 = int(input("您想修改该名员工的哪项信息？(1.姓名 2.薪水)"))
+        if index2 == 1:
+            new_name = input("请输入修改后的姓名：")
+            staff_list[index - 1].name = new_name
+            print(staff_list[index - 1])
+        elif index2 == 2:
+            new_salary = input("请输入修改后的薪水：")
+            if not new_salary.isdigit():
+                print('修改失败，请输入数字')
+                continue
+            else:
+                staff_list[index - 1].salary = new_salary
+                print(staff_list[index - 1])
+
+
+    #删除员工对象
+    elif key == 4:
+        print("当前有如下员工：")
+        for member in staff_list:
+            print(member)
+        #基本原理与修改信息时相同
+        index = int(input("您想删除第几位员工的信息？"))
+        #暂存待删除的员工姓名
+        get_name = staff_list[index - 1].name
+        del(staff_list[index - 1])
+        print("您已成功删除员工%s的信息" % get_name)
+    
+    #将员工信息保存到本地
+    elif key == 5:
+        with open ('D:\\staff_information.txt', 'w+') as file:
+            for i in range(len(staff_list)):
+                #把每个员工对象的姓名和薪水属性整合成一个串
+                get_info = '姓名：' + staff_list[i].name + '  当前工资：'+ str(staff_list[i].salary)
+                file.write(get_info)
+                file.write('\n')
+            print("已成功将员工信息导入到D盘根目录下staff_information.txt文本文档内！")
+
+    #退出系统
+    elif key == 6:
+        print("感谢使用本系统！祝您早日出任CEO迎娶白富美，再见！")
+        break
+
+    else:
+        print("请输入正确功能序号！")
