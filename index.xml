@@ -5,10 +5,23 @@
     <link>https://kdf9000.github.io/</link>
     <description>Recent content on CK_D</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 May 2019 08:23:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jun 2019 19:00:58 +0800</lastBuildDate>
     
 	<atom:link href="https://kdf9000.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My First Python Program</title>
+      <link>https://kdf9000.github.io/post/first/</link>
+      <pubDate>Mon, 24 Jun 2019 19:00:58 +0800</pubDate>
+      
+      <guid>https://kdf9000.github.io/post/first/</guid>
+      <description>&amp;rdquo;&amp;rsquo; 简易人事管理系统 功能： 1.以员工为对象实现基础的增删改查 2.将所有数据保存到本地 &amp;ldquo;&amp;rsquo; class Staff: #为员工添加 姓名 和 薪水 属性 def init(self, name, salary): self.name = name self.salary = salary
+def __str__(self): return &amp;quot;员工%s，工资%s&amp;quot; % (self.name, self.salary) #后面并没有真正删除某个员工对象，所以__del__没用上。。。 def __del__(self): print(&amp;quot;您已成功删除员工%s的信息&amp;quot; % self.name)  #生成列表保存员工对象
+staff_list = []
+#预先生成几个员工凑数 newstaff1 = Staff(&amp;ldquo;张三&amp;rdquo;, 3700) newstaff2 = Staff(&amp;ldquo;李四&amp;rdquo;, 4600) newstaff3 = Staff(&amp;ldquo;王五&amp;rdquo;, 5400) staff_list.append(newstaff1) staff_list.append(newstaff2) staff_list.append(newstaff3)
+while True: #功能列表 print(&amp;ldquo;&amp;rdquo;) print(&amp;ldquo;===========================&amp;rdquo;) print(&amp;ldquo;欢迎使用该人事管理系统&amp;rdquo;) print(&amp;ldquo;1.添加员工信息&amp;rdquo;) print(&amp;ldquo;2.查看员工列表&amp;rdquo;) print(&amp;ldquo;3.修改员工信息&amp;rdquo;) print(&amp;ldquo;4.删除员工信息&amp;rdquo;) print(&amp;ldquo;5.将员工信息保存到D盘根目录&amp;rdquo;) print(&amp;ldquo;6.退出系统&amp;rdquo;) print(&amp;ldquo;&amp;rdquo;)</description>
+    </item>
     
     <item>
       <title>Study  Notes of PLAY WITH DATA STRUCTURE</title>
