@@ -5,10 +5,19 @@
     <link>https://kdf9000.github.io/</link>
     <description>Recent content on CK_D</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 24 Jun 2019 19:00:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 16:44:46 +0800</lastBuildDate>
     
 	<atom:link href="https://kdf9000.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Studynoteofgit</title>
+      <link>https://kdf9000.github.io/post/studynoteofgit/</link>
+      <pubDate>Fri, 06 Dec 2019 16:44:46 +0800</pubDate>
+      
+      <guid>https://kdf9000.github.io/post/studynoteofgit/</guid>
+      <description>基本概念 仓库(Repository): 用来存放开源项目的代码，在github上开源一个项目，就必须新建一个repository 收藏(Star): 收藏仓库，方便查找，但不会收到动态 复制项目(Fork): 复制某一仓库到自己的个人中心，独立于原项目存在，对fork的项目进行修改不影响原项目 发送请求(Pull Request): fork一个仓库后，做了一些改进，希望更多人受益，可以发起pull request给原项目的创建人，如果他接受，那么所做的改进就会在原项目上得到 更新 【对开源项目做出贡献的方式之一，流程：fork-&amp;gt;修改自己仓库中的代码-&amp;gt;新建pull request-&amp;gt;等待合并审核】 关注(Watch): 接收某个项目的更新通知 事务卡片(Issue): 发现bug，但没有成型的代码，发起讨论 【对开源项目做出贡献的方式之二】 GitHub主页: 账号创建成功或点击网址导航栏GitHub图标都可进入GitHub主页，该页左侧主要显示用户动态记忆关注用户或关注仓库的动态，右侧显示自有的 和fork的库 仓库主页: 显示信息如：项目代码，版本，收藏、关注、fork情况 个人主页: 个人信息的展示 Git 目的：通过git管理GitHub，托管项目代码 初始化git: $ git config --global user.name &#39;kdf9000&#39; 注册用户名 $ git config --global user.email &#39;1808600156@qq.com&#39; 注册邮箱 $ git config --list 检验 本地操作 初始化git仓库： 1.创建文件夹 2.在文件内初始化git(创建git仓库) git init 会生成一个名为.git的隐藏文件夹，用于存储仓库所有存储信息 向仓库添加文件: 1.创建文件 此时git status的结果是红色文件名 2.把文件提交到暂存区 git add [文件名] 此时git status的结果是绿色文件名 3.把文件从暂存区提交到仓库 git commit -m &#39;提交描述&#39; 此时git status的结果是 nothing to commit, working tree clean 修改仓库文件: 1.</description>
+    </item>
     
     <item>
       <title>My First Python Program</title>
